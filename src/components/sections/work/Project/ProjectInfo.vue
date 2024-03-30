@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="space-y-8">
-      <ProjectSmall title="Software" :details="project.software"/>
-      <ProjectSmall title="Links" :details="project.links"/>
+      <ProjectSmall title="Software" :software="project.software"/>
+      <ProjectSmall title="Links" :links="project.links"/>
     </div>
   </div>
 </template>

@@ -25,7 +25,7 @@
             </div>
           </div>
           <div class="pointer-events-none relative w-1/3 max-w-fit overflow-hidden lg:hidden">
-            <img src="/img/portrait-no-jp.png" class="h-full" alt="">
+            <img src="https://res.cloudinary.com/dht0jhvlk/image/upload/v1711835070/img/wchzhxqgvncygw6rx0aw.png" class="h-full" alt="">
           </div>
         </div>
       </div>
