@@ -148,7 +148,7 @@ const data = ref([]);
 const dataPreProcess = ref([]);
 
 const fetchSkills = () => {
-  fetch('http://192.168.0.100:2540/api/skills')
+  fetch('https://www.anchooor.wtf/api/skills')
     .then(response => response.json())
     .then(fetchedData => {
       const allSkills = [];

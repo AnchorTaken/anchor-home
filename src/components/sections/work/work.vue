@@ -96,7 +96,7 @@ import ProjectSmall from "~/src/components/sections/work/Project/ProjectSmall.vu
 const data = ref([]);
 
 const fetchSkills = () => {
-  fetch('http://192.168.0.100:2540/api/projects')
+  fetch('https://www.anchooor.wtf/api/projects')
     .then(response => response.json())
     .then(fetchedData => {
       data.value = fetchedData;

@@ -86,7 +86,7 @@ const previousClient = () => {
 }
 
 const fetchSkills = () => {
-  fetch('http://192.168.0.100:2540/api/clients')
+  fetch('https://www.anchooor.wtf/api/skills/api/clients')
     .then(response => response.json())
     .then(fetchedData => {
       data.value = fetchedData;
