@@ -13,7 +13,7 @@
         </div>
       </div>
       <div v-if="links" class="flex flex-wrap gap-x-8 gap-y-3">
-        <ProjectLink v-for="(link, l) in links" :key="l" :icon="link.svg">
+        <ProjectLink v-for="(link, l) in links" :key="l" :url="link.url" :icon="link.svg">
           {{ link.name }}
         </ProjectLink>
       </div>

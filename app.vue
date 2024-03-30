@@ -10,8 +10,6 @@
 <script setup>
 import 'animate.css';
 import {ref} from "vue";
-
-
 import Hero from "~/src/components/sections/hero/hero.vue";
 import About from "~/src/components/sections/about/about.vue";
 import Work from "~/src/components/sections/work/work.vue";
