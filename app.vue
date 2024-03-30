@@ -26,12 +26,11 @@ useHead({
     {rel: 'icon', type: 'image/x-icon', href: '/img/icon.png'},
   ],
   meta: [
-    {name: 'description', content: 'My amazing site.'},
+    {name: 'description', content: 'no description'},
   ],
   bodyAttrs: {
     class: 'test',
   },
-  script: [ {innerHTML: 'console.log(\'Hello world\')'} ],
 })
 
 </script>
