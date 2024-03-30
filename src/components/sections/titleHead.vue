@@ -8,7 +8,7 @@
         <slot name="title"/>
       </div>
     </div>
-    <p class="lg:text-justify font-semibold font-jet 2xl:w-7/12 2xl:text-2xl" :class="dark ? 'text-white' : 'text-black'">
+    <p class="lg:text-justify font-semibold font-jet 2xl:w-7/12 uppercase 2xl:text-2xl" :class="dark ? 'text-white' : 'text-black'">
       <slot/>
     </p>
   </div>
