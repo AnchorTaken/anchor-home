@@ -59,11 +59,11 @@
           <div class="absolute top-0 right-0 bottom-0 left-0 m-auto hidden h-10 rounded-lg bg-white opacity-0 transition-all duration-75 w-[98%] group-hover:opacity-100 lg:flex"/>
         </div>
         <div
-          class="relative m-auto flex h-fit w-fit cursor-pointer justify-between overflow-hidden rounded-full border-4 border-black bg-black px-20 py-2 text-xl font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
+          class="relative m-auto flex h-fit w-fit cursor-pointer justify-between overflow-hidden rounded-xl border-4 border-black bg-black px-20 py-2  font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
           @click="viewSkills"
         >
-          <span class="transition-all duration-75 group-hover:-translate-y-10">View All</span>
-          <span class="absolute top-0 right-0 bottom-0 left-0 z-20 m-auto lg:h-6 h-3 w-3 lg:w-6 translate-y-10 text-black transition-all duration-75 group-hover:-translate-y-0">
+          <span class="transition-all duration-75 group-hover:-translate-y-10 text-base lg:text-xl">View All</span>
+          <span class="absolute top-0 right-0 bottom-0 left-0 z-20 m-auto lg:h-5 h-3 w-3 lg:w-5 translate-y-10 text-black transition-all duration-75 group-hover:-translate-y-0">
             <svg viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.14346 9.60627C4.34238 9.60627 4.53314 9.52726 4.67379 9.3866C4.81445 9.24595 4.89346 9.05519 4.89346 8.85627V2.91627L6.86346 4.88627C7.00564 5.01875 7.19369 5.09088 7.38799 5.08745C7.58229 5.08402 7.76767 5.00531 7.90509 4.8679C8.0425 4.73048 8.12121 4.5451 8.12464 4.3508C8.12807 4.1565 8.05594 3.96845 7.92346 3.82627L4.67346 0.576274C4.53284 0.435823 4.34221 0.356934 4.14346 0.356934C3.94471 0.356934 3.75409 0.435823 3.61346 0.576274L0.363464 3.82627C0.289777 3.89494 0.230675 3.97774 0.189683 4.06974C0.148691 4.16173 0.126649 4.26105 0.124873 4.36175C0.123096 4.46245 0.14162 4.56248 0.179341 4.65587C0.217062 4.74926 0.273207 4.83409 0.344426 4.90531C0.415644 4.97653 0.500478 5.03268 0.593867 5.0704C0.687255 5.10812 0.787284 5.12664 0.887987 5.12487C0.98869 5.12309 1.088 5.10105 1.18 5.06005C1.272 5.01906 1.3548 4.95996 1.42346 4.88627L3.39346 2.91627V8.85627C3.39346 9.27027 3.72946 9.60627 4.14346 9.60627Z" fill="currentColor"/>
             </svg>
