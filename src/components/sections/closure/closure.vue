@@ -24,7 +24,7 @@
 </template>
 <script setup>
 import {ref} from "vue";
-import PoloColors from "~/src/components/PoloColors.vue";
+import PoloColors from "~/src/components/misc/PoloColors.vue";
 
 const icons = [
   {

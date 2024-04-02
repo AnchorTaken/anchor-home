@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed right-0 bottom-0 left-0 z-50 mx-auto rounded-t-3xl bg-black w-[95%] bg-opacity-90 p-3 text-white backdrop-blur animate__animated animate__faster animate__slideInUp space-y-4 lg:w-9/12 lg:p-10">
+  <div class="fixed right-0 bottom-0 left-0 z-50 mx-auto rounded-t-3xl bg-black bg-opacity-90 p-3 text-white backdrop-blur w-[95%] animate__animated animate__faster animate__slideInUp space-y-4 lg:w-9/12 lg:p-10">
     <div class="flex w-full justify-between">
       <div class="flex flex-col justify-between gap-y-2 lg:flex-row">
         <div class="flex gap-x-4">
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="rounded-3xl bg-white p-4 text-justify font-semibold text-black font-jet lg:p-10 lg:text-xl" v-html="deeper"/>
+    <div class="rounded-3xl bg-white p-4 text-sm font-semibold text-black font-jet lg:p-10 lg:text-xl" v-html="deeper"/>
   </div>
   <div class="fixed top-0 left-0 z-40 h-full w-full bg-black bg-opacity-40" @click="$emit('quit')"/>
 </template>

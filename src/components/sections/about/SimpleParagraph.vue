@@ -1,5 +1,5 @@
 <template>
-  <p class="text-justify font-semibold font-jet text-sm uppercase">
+  <p class="text-sm font-semibold uppercase font-jet lg:text-base">
     <slot/>
   </p>
 </template>

@@ -7,8 +7,7 @@
             Stats
           </div>
         </template>
-        I am a web designer with 6 years of experience In the field and I create stunning experiences without
-        sacrificing User Experience
+        Explore my top 10 skills that I pride myself on and dive into detailed insights on how I developed these skills
       </title-head>
 
       <div class="flex flex-wrap gap-x-6 gap-y-3">
@@ -48,18 +47,13 @@
               </SkillInside>
             </div>
           </div>
-          <div v-if="item.in_depth !== null" class="relative z-20 my-auto flex h-5 w-5 text-white lg:group-hover:text-black">
-            <svg viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M-2.99735e-07 6.85714L-3.99647e-07 9.14286L14.25 9.14286L14.25 11.4286L16.625 11.4286L16.625 9.14286L19 9.14286L19 6.85714L16.625 6.85714L16.625 4.57143L14.25 4.57143L14.25 6.85714L-2.99735e-07 6.85714ZM11.875 2.28571L14.25 2.28571L14.25 4.57143L11.875 4.57143L11.875 2.28571ZM11.875 2.28571L9.5 2.28571L9.5 -4.15258e-07L11.875 -3.11444e-07L11.875 2.28571ZM11.875 13.7143L14.25 13.7143L14.25 11.4286L11.875 11.4286L11.875 13.7143ZM11.875 13.7143L9.5 13.7143L9.5 16L11.875 16L11.875 13.7143Z"
-                fill="currentColor"
-              />
-            </svg>
+          <div v-if="item.in_depth !== null" class="relative z-20 my-auto flex h-4 w-4 text-white lg:group-hover:text-black">
+            <IconLibrary name="arrow-right"/>
           </div>
           <div class="absolute top-0 right-0 bottom-0 left-0 m-auto hidden h-10 rounded-lg bg-white opacity-0 transition-all duration-75 w-[98%] group-hover:opacity-100 lg:flex"/>
         </div>
         <div
-          class="relative m-auto flex h-fit w-fit cursor-pointer justify-between overflow-hidden rounded-xl border-4 border-black bg-black px-20 py-2  font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
+          class="relative m-auto flex h-fit w-fit border-white cursor-pointer justify-between overflow-hidden rounded-xl border-4 hover:border-black bg-black px-20 py-2  font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
           @click="viewSkills"
         >
           <span class="transition-all duration-75 group-hover:-translate-y-10 text-base lg:text-xl">View All</span>
@@ -85,9 +79,10 @@
 import {ref} from "vue";
 import AllSkills from "~/src/components/sections/skills/AllSkills.vue";
 import LegendItem from "~/src/components/sections/skills/skill/LegendItem.vue";
-import TitleHead from "~/src/components/sections/titleHead.vue";
+import TitleHead from "~/src/components/reusables/TitleHead.vue";
 import IndepthViewer from "~/src/components/sections/skills/IndepthViewer.vue";
 import SkillInside from "~/src/components/sections/skills/skill/SkillInside.vue";
+import IconLibrary from "~/src/components/misc/IconLibrary.vue";
 
 const states = ref({
   viewingSkills: ref(false),

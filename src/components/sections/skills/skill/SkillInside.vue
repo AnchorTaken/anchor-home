@@ -1,5 +1,5 @@
 <template>
-  <div class="z-10 flex space-x-3">
+  <div class="z-10 flex space-x-3 h-fit my-auto ">
     <i class="my-auto flex h-3 w-3 text-white lg:h-4 lg:w-4 lg:group-hover:text-black">
       <svg v-html="icon"/>
     </i>

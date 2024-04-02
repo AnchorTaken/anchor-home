@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import IconLibrary from "~/src/components/IconLibrary.vue";
+import IconLibrary from "~/src/components/misc/IconLibrary.vue";
 
 const props = defineProps(['icon', 'url'])
 </script>

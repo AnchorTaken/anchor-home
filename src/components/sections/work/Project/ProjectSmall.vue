@@ -21,7 +21,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import IconLibrary from "~/src/components/IconLibrary.vue";
+import IconLibrary from "~/src/components/misc/IconLibrary.vue";
 import ProjectLink from "~/src/components/sections/work/Project/ProjectLink.vue";
 const props = defineProps(['links', 'software', 'title'])
 </script>
