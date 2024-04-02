@@ -9,8 +9,3 @@ export const truncateText = (text, limit = 300) => {
   }
   return text;
 };
-
-module.exports = {
-  addBreaks,
-  truncateText,
-};

@@ -22,8 +22,6 @@ export function useBreakpoints(){
     breakpoints.value.tablet = windowWidth >= breakpointValues.mobile && windowWidth < breakpointValues.tablet;
     breakpoints.value.smallDesktop = windowWidth >= breakpointValues.tablet && windowWidth < breakpointValues.smallDesktop;
     breakpoints.value.largeDesktop = windowWidth >= breakpointValues.smallDesktop;
-
-    console.log('Current Breakpoint:', currentBreakpoint.value);
   };
 
   const currentBreakpoint = computed(() => {
