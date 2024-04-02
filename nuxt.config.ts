@@ -8,9 +8,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  alias: {
-    '@': __dirname + '/src',
-  },
   css: ['/src/assets/css/styles.css'],
   modules: ['@nuxtjs/eslint-module'],
 })

@@ -15,8 +15,8 @@
 
 <script setup>
 import {ref, computed} from 'vue';
-import {addBreaks, truncateText} from '@/utils/misc';
-import {useBreakpoints} from '@/composables/useBreakpoints';
+import {addBreaks, truncateText} from '~/src/utils/misc';
+import {useBreakpoints} from '~/src/composables/useBreakpoints';
 
 import BasicButton from "~/src/components/buttons/BasicButton.vue";
 
