@@ -14,7 +14,7 @@
 
     <div class="absolute top-0 left-0 h-full w-full" @click="$emit('close')"/>
   </div>
-  <button class="fixed bottom-0 lg:hidden left-0 z-30 w-full bg-white px-4 font-black uppercase font-jet lg:relative" @click="$emit('close')">
+  <button class="fixed bottom-0 lg:hidden left-0 z-30 w-full bg-white px-4 py-3 font-black uppercase font-jet lg:relative" @click="$emit('close')">
     close
   </button>
 </template>

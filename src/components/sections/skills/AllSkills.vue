@@ -22,18 +22,18 @@
     </div>
     <div class="flex h-full max-h-full flex-col justify-between">
       <div class="space-y-6 ">
-        <div class="container mx-auto space-y-6">
+        <div class="container mx-auto space-y-6 px-5 ">
           <div class="px-5 pt-5 lg:p-0">
             <div class="space-y-4">
               <div class="">
                 <div class="w-5/12 text-sm font-bold leading-none text-black font-noto lg:w-full 2xl:text-2xl">
                   スキルと実績の数値が、能力の広がりを物語る。
                 </div>
-                <div class="flex flex-col font-black uppercase leading-none text-black font-barlow text-[7rem] lg:flex-row 2xl:text-[14rem]">
-                  <div class="leading-[6rem] lg:leading-[14rem]">
+                <div class="flex flex-col font-black uppercase lg:space-x-6 leading-none text-black font-barlow text-[7rem] lg:flex-row xl:text-[10rem] 2xl:text-[14rem]">
+                  <div class="leading-[6rem] lg:leading-[10rem] 2xl:leading-[14rem]">
                     All
                   </div>
-                  <div class="leading-[6rem] lg:leading-[14rem]">
+                  <div class="leading-[6rem]  lg:leading-[10rem] 2xl:leading-[14rem]">
                     Stats
                   </div>
                 </div>
@@ -117,7 +117,7 @@
             </div>
           </div>
 
-          <div class="pointer-events-none absolute xl:top-44 right-0 z-10 lg:flex  hidden lg:top-32 lg:w-[200px]  xl:w-[600px]">
+          <div class="pointer-events-none absolute 2xl:top-44 right-0 z-10 lg:flex  hidden  xl:top-32 lg:w-[200px]  xl:w-[400px]">
             <svg viewBox="0 0 453 89" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.579956 8.76193H82.234V18.2479H0.579956V8.76193ZM35.083 0.856934H46.615V13.5049H35.083V0.856934ZM4.29996 46.3339H72.283V55.5409H15.181V88.4629H4.29996V46.3339ZM68.098 46.3339H79.351V76.6519C79.351 81.7669 78.328 84.7429 74.701 86.4169C71.167 88.0909 66.238 88.2769 59.542 88.2769C59.17 85.1149 57.589 80.6509 56.101 77.7679C60.286 77.9539 65.029 77.9539 66.331 77.8609C67.726 77.8609 68.098 77.4889 68.098 76.3729V46.3339ZM23.551 59.8189H33.223V84.9289H23.551V59.8189ZM28.387 59.8189H59.263V80.6509H28.387V73.2109H49.405V67.2589H28.387V59.8189ZM26.434 29.3149V34.8949H55.729V29.3149H26.434ZM15.832 21.8749H66.982V42.4279H15.832V21.8749Z" fill="black"/>
               <path d="M112.18 27.1759H176.815V36.0109H112.18V27.1759ZM112.924 54.3319H163.981V63.0739H112.924V54.3319ZM124.828 21.0379H135.337V42.1489H152.356V21.0379H163.33V50.6119H124.828V21.0379ZM161.098 54.3319H163.237L165.19 53.8669L172.165 57.4009C162.121 77.5819 139.615 85.3009 113.482 88.5559C112.645 85.7659 110.599 81.5809 108.832 79.2559C132.64 77.2099 153.565 70.6069 161.098 55.7269V54.3319ZM131.989 61.1209C140.359 71.5369 157.75 77.2099 179.14 79.0699C176.815 81.3949 174.025 85.8589 172.63 88.6489C150.031 85.8589 132.826 78.4189 122.41 64.5619L131.989 61.1209ZM132.547 1.04293H144.172V14.9929H132.547V1.04293ZM104.647 9.41293H177.28V19.3639H104.647V9.41293ZM99.16 9.41293H109.855V35.6389C109.855 50.7979 108.46 73.6759 99.997 88.0909C98.044 86.2309 93.394 83.1619 90.79 81.9529C98.602 68.7469 99.16 49.3099 99.16 35.6389V9.41293Z" fill="black"/>
