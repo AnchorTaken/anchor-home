@@ -33,7 +33,7 @@ useHead({
 
 </script>
 
-<style scoped>
+<style>
 
 ::-webkit-scrollbar {
   width: 10px; /* For vertical scrollbars */

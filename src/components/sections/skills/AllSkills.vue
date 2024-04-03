@@ -22,7 +22,7 @@
     </div>
     <div class="flex h-full max-h-full flex-col justify-between">
       <div class="space-y-6 ">
-        <div class="container mx-auto space-y-6 px-5 ">
+        <div class="container mx-auto space-y-6 lg:px-5 ">
           <div class="px-5 pt-5 lg:p-0">
             <div class="space-y-4">
               <div class="">

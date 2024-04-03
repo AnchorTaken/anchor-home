@@ -35,7 +35,7 @@
           <SimpleParagraph>
             My current aspirations are to continue expanding my skillset through finding people who are deeply interested in providing an exceptional product or experience to end users as well as push my skillset to its limits.
           </SimpleParagraph>
-          <span class="flex text-sm font-black uppercase font-barlow md:text-xl">web is my canvas. so let me draw you a masterpiece</span>
+          <span class="flex text-sm font-black uppercase font-barlow md:text-xl">web is my canvas. so lets make something cool together</span>
         </div>
       </div>
       <div class="pointer-events-none absolute right-0 hidden h-full w-1/3 overflow-hidden md:top-32 md:flex md:w-5/12 lg:top-10">
