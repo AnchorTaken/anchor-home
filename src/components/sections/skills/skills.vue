@@ -143,7 +143,7 @@ const data = ref([]);
 const dataPreProcess = ref([]);
 
 const fetchSkills = () => {
-  fetch('https://www.anchooor.wtf/api/skills')
+  fetch('https://anhc0rapidoman.shop' + '/api/skills')
     .then(response => response.json())
     .then(fetchedData => {
       const allSkills = [];
@@ -173,7 +173,7 @@ function formatTime(hours){
   } else if (hours < 8760){ // 365 days
     const days = Math.round(hours / 24);
     return `${days} days`;
-  } else if (hours < 105120){ // 12 months
+  } else if (hours < 8760 * 2){ // 2 years
     const months = Math.round(hours / (24 * 365 / 12));
     return `${months} months`;
   } else {

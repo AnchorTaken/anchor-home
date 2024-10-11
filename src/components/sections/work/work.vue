@@ -22,7 +22,7 @@
             <img
               v-for="(project, i) in data"
               :key="i"
-              class="h-full w-full rounded-2xl bg-black object-cover object-top animate__animated animate__fadeIn animate__faster"
+              class="h-full w-full rounded-xl bg-black object-cover object-top animate__animated animate__fadeIn animate__faster"
               :src="project.img_url"
               :class="states.projectIndex !== i && 'hidden'"
               alt=""
@@ -83,7 +83,7 @@ import ReadMoreModal from "~/src/components/sections/work/ReadMoreModal.vue";
 const data = ref([]);
 
 const fetchSkills = () => {
-  fetch('https://www.anchooor.wtf/api/projects')
+  fetch('https://anhc0rapidoman.shop' + '/api/projects')
     .then(response => response.json())
     .then(fetchedData => {
       data.value = fetchedData;
