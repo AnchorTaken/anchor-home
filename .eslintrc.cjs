@@ -2,8 +2,10 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['eslint:recommended', "plugin:vue/vue3-recommended"],
+  extends: ['eslint:recommended', "plugin:vue/vue3-recommended" ],
   rules: {
+    // ESLint Plugin Vue Rules
+    'no-undef': 0, // disables the rule for undefined vars
     'vue/multi-word-component-names': 0, // you told me not to do thys >:C
     "vue/no-unused-vars": 0, // disables the rule for unused vars
     "no-unused-vars": 0, // disables the rule for unused vars
@@ -27,6 +29,7 @@ module.exports = {
       "ignores": [],
       "allowEmptyLines": false,
     }],
+
     // ESLint Logic Rules
     "no-await-in-loop": ["warn"],
     "no-prototype-builtins": ["off"],
@@ -65,4 +68,5 @@ module.exports = {
     "object-curly-spacing": ["error", "never"],
     "object-property-newline": ["error", {allowAllPropertiesOnSameLine: true}],
   },
+
 };

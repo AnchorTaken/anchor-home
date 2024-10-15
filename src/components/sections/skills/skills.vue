@@ -17,8 +17,9 @@
         <div
           v-for="(item, i) in data"
           :key="i"
-          class="relative flex cursor-pointer justify-between overflow-hidden rounded-2xl bg-black px-8 py-4 transition-all duration-100 group"
+          class="relative flex cursor-pointer justify-between overflow-hidden rounded-xl bg-black px-8 py-4 transition-all duration-100 group"
           @click="switchInDepth(item)"
+          @mouseover="isShowing = i"
         >
           <div class="flex w-full lg:w-2/3 justify-between gap-x-6">
             <div class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-6">
@@ -50,7 +51,7 @@
           <div v-if="item.in_depth !== null" class="relative z-20 my-auto flex h-4 w-4 text-white lg:group-hover:text-black">
             <IconLibrary name="arrow-right"/>
           </div>
-          <div class="absolute top-0 right-0 bottom-0 left-0 m-auto hidden h-10 rounded-lg bg-white opacity-0 transition-all duration-75 w-[98%] group-hover:opacity-100 lg:flex"/>
+          <div class="absolute top-0 right-0 bottom-0 left-0 m-auto hidden group-hover:opacity-100 h-12 rounded-lg bg-white opacity-0 transition-all duration-75 w-[99%]   lg:flex  "/>
         </div>
         <div
           class="relative m-auto flex h-fit w-fit border-white cursor-pointer justify-between overflow-hidden rounded-xl border-4 hover:border-black bg-black px-20 py-2  font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
@@ -84,6 +85,8 @@ import IndepthViewer from "~/src/components/sections/skills/IndepthViewer.vue";
 import SkillInside from "~/src/components/sections/skills/skill/SkillInside.vue";
 import IconLibrary from "~/src/components/misc/IconLibrary.vue";
 
+
+const isShowing = ref(0);
 const states = ref({
   viewingSkills: ref(false),
   currentSkill: ref(0),
@@ -135,7 +138,7 @@ const legend = [
     text: `Software Knowledge`,
   },
   {
-    icon: `<svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M16 0.5C16.5304 0.5 17.0391 0.710714 17.4142 1.08579C17.7893 1.46086 18 1.96957 18 2.5V14.5C18 15.0304 17.7893 15.5391 17.4142 15.9142C17.0391 16.2893 16.5304 16.5 16 16.5H2C1.46957 16.5 0.960859 16.2893 0.585786 15.9142C0.210714 15.5391 0 15.0304 0 14.5V2.5C0 1.96957 0.210714 1.46086 0.585786 1.08579C0.960859 0.710714 1.46957 0.5 2 0.5H16ZM16 6.5H2V13.5C2.00003 13.7449 2.08996 13.9813 2.25272 14.1644C2.41547 14.3474 2.63975 14.4643 2.883 14.493L3 14.5H15C15.2449 14.5 15.4813 14.41 15.6644 14.2473C15.8474 14.0845 15.9643 13.8603 15.993 13.617L16 13.5V6.5ZM3 2.5C2.73478 2.5 2.48043 2.60536 2.29289 2.79289C2.10536 2.98043 2 3.23478 2 3.5C2 3.76522 2.10536 4.01957 2.29289 4.20711C2.48043 4.39464 2.73478 4.5 3 4.5C3.26522 4.5 3.51957 4.39464 3.70711 4.20711C3.89464 4.01957 4 3.76522 4 3.5C4 3.23478 3.89464 2.98043 3.70711 2.79289C3.51957 2.60536 3.26522 2.5 3 2.5ZM6 2.5C5.73478 2.5 5.48043 2.60536 5.29289 2.79289C5.10536 2.98043 5 3.23478 5 3.5C5 3.76522 5.10536 4.01957 5.29289 4.20711C5.48043 4.39464 5.73478 4.5 6 4.5C6.26522 4.5 6.51957 4.39464 6.70711 4.20711C6.89464 4.01957 7 3.76522 7 3.5C7 3.23478 6.89464 2.98043 6.70711 2.79289C6.51957 2.60536 6.26522 2.5 6 2.5ZM9 2.5C8.73478 2.5 8.48043 2.60536 8.29289 2.79289C8.10536 2.98043 8 3.23478 8 3.5C8 3.76522 8.10536 4.01957 8.29289 4.20711C8.48043 4.39464 8.73478 4.5 9 4.5C9.26522 4.5 9.51957 4.39464 9.70711 4.20711C9.89464 4.01957 10 3.76522 10 3.5C10 3.23478 9.89464 2.98043 9.70711 2.79289C9.51957 2.60536 9.26522 2.5 9 2.5Z" fill="currentColor"/> </svg>`,
+    icon: `<svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M16 0.5Chttps://www.anchooor.wtf16.5304 0.5 17.0391 0.710714 17.4142 1.08579C17.7893 1.46086 18 1.96957 18 2.5V14.5C18 15.0304 17.7893 15.5391 17.4142 15.9142C17.0391 16.2893 16.5304 16.5 16 16.5H2C1.46957 16.5 0.960859 16.2893 0.585786 15.9142C0.210714 15.5391 0 15.0304 0 14.5V2.5C0 1.96957 0.210714 1.46086 0.585786 1.08579C0.960859 0.710714 1.46957 0.5 2 0.5H16ZM16 6.5H2V13.5C2.00003 13.7449 2.08996 13.9813 2.25272 14.1644C2.41547 14.3474 2.63975 14.4643 2.883 14.493L3 14.5H15C15.2449 14.5 15.4813 14.41 15.6644 14.2473C15.8474 14.0845 15.9643 13.8603 15.993 13.617L16 13.5V6.5ZM3 2.5C2.73478 2.5 2.48043 2.60536 2.29289 2.79289C2.10536 2.98043 2 3.23478 2 3.5C2 3.76522 2.10536 4.01957 2.29289 4.20711C2.48043 4.39464 2.73478 4.5 3 4.5C3.26522 4.5 3.51957 4.39464 3.70711 4.20711C3.89464 4.01957 4 3.76522 4 3.5C4 3.23478 3.89464 2.98043 3.70711 2.79289C3.51957 2.60536 3.26522 2.5 3 2.5ZM6 2.5C5.73478 2.5 5.48043 2.60536 5.29289 2.79289C5.10536 2.98043 5 3.23478 5 3.5C5 3.76522 5.10536 4.01957 5.29289 4.20711C5.48043 4.39464 5.73478 4.5 6 4.5C6.26522 4.5 6.51957 4.39464 6.70711 4.20711C6.89464 4.01957 7 3.76522 7 3.5C7 3.23478 6.89464 2.98043 6.70711 2.79289C6.51957 2.60536 6.26522 2.5 6 2.5ZM9 2.5C8.73478 2.5 8.48043 2.60536 8.29289 2.79289C8.10536 2.98043 8 3.23478 8 3.5C8 3.76522 8.10536 4.01957 8.29289 4.20711C8.48043 4.39464 8.73478 4.5 9 4.5C9.26522 4.5 9.51957 4.39464 9.70711 4.20711C9.89464 4.01957 10 3.76522 10 3.5C10 3.23478 9.89464 2.98043 9.70711 2.79289C9.51957 2.60536 9.26522 2.5 9 2.5Z" fill="currentColor"/> </svg>`,
     text: `Projects Using Software`,
   },
 ]

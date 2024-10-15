@@ -14,7 +14,7 @@
           Explore my project portfolio and discover the creative process and cutting-edge technologies behind each unique creation
         </title-head>
         <div class="hidden space-x-4 lg:flex">
-          <ProjectButton v-for="(project, i) in data" :key="i" :name="project.name" @click="switchWork(project, i)"/>
+          <ProjectButton v-for="(project, i) in data" :key="i" :name="project.name" :active="states.projectIndex === i" @click="switchWork(project, i)"/>
         </div>
 
         <div class="flex flex-col justify-between lg:space-x-10 lg:flex-row">
@@ -101,6 +101,7 @@ const states = ref({
   readMore: false,
 })
 const switchWork = (work, id) => {
+  if(id === states.value.projectIndex) return;
   if (work === undefined){
     states.value.projectIndex = null;
     states.value.projectData = null;

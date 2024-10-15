@@ -17,20 +17,6 @@ import Skills from "~/src/components/sections/skills/skills.vue";
 import Employment from "~/src/components/sections/employment/employment.vue";
 import Closure from "~/src/components/sections/closure/closure.vue";
 
-
-useHead({
-  title: 'anchor.graphics',
-  link: [
-    {rel: 'icon', type: 'image/x-icon', href: '/img/icon.png'},
-  ],
-  meta: [
-    {name: 'description', content: 'no description'},
-  ],
-  bodyAttrs: {
-    class: 'test',
-  },
-})
-
 </script>
 
 <style>

@@ -4,13 +4,13 @@
       <svg v-html="icon"/>
     </i>
 
-    <span class="my-auto flex h-fit text-base font-semibold uppercase leading-none text-white font-jet lg:text-xl lg:group-hover:text-black">
+    <span class="my-auto flex h-fit text-base font-semibold uppercase leading-none  font-jet lg:text-xl lg:group-hover:text-black" :class="isHovered ? 'text-black' : 'text-white'">
       <slot/>
     </span>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['icon'])
+const props = defineProps(['icon', 'isHovered'])
 
 </script>
