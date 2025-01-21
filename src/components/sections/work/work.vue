@@ -4,7 +4,7 @@
       <div class="container m-auto flex max-h-full flex-col px-5 space-y-5">
         <title-head jp="作品は感覚と想像の糸で織りなし、心を静かに貫く。" :dark="true">
           <template #title>
-            <div class="leading-[6rem] lg:leading-[12rem]">
+            <div class="leading-[6rem] pr-5 lg:leading-[12rem]">
               My
             </div>
             <div class="leading-[6rem] lg:leading-[12rem]">
@@ -83,7 +83,7 @@ import ReadMoreModal from "~/src/components/sections/work/ReadMoreModal.vue";
 const data = ref([]);
 
 const fetchSkills = () => {
-  fetch('https://anhc0rapidoman.shop' + '/api/projects')
+  fetch(`${import.meta.env.VITE_BASE_URL}/api/projects`)
     .then(response => response.json())
     .then(fetchedData => {
       data.value = fetchedData;

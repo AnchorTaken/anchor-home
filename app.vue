@@ -1,8 +1,7 @@
 <template>
-  <Hero/>
-  <About/>
-  <Work/>
   <Skills/>
+  <Work/>
+  <About/>
   <Employment/>
   <Closure/>
 </template>

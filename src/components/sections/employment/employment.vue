@@ -98,7 +98,7 @@ const previousClient = () => {
 }
 
 const fetchSkills = () => {
-  fetch('https://anhc0rapidoman.shop' + '/api/clients')
+  fetch(`${import.meta.env.VITE_BASE_URL}/api/clients`)
     .then(response => response.json())
     .then(fetchedData => {
       data.value = fetchedData;
