@@ -1,10 +1,10 @@
 <template>
-  <div class="relative z-10 py-5 lg:pb-44 lg:pt-20 overflow-hidden">
+  <div class="relative z-10 h-full w-full overflow-hidden pt-10">
     <div class="container relative z-20 m-auto px-5 space-y-6">
-      <title-head jp="スキルと実績の数値が、能力の広がりを物語る。">
+      <title-head jp="スキルと実績の数値が、能力の広がりを物語る。" color="text-[#F60000]">
         <template #title>
           <div>
-           MY Stats
+            Stats
           </div>
         </template>
         Explore my top 10 skills that I pride myself on and dive into detailed insights on how I developed these skills
@@ -13,15 +13,15 @@
       <div class="flex flex-wrap gap-x-6 gap-y-3">
         <LegendItem v-for="(item, i) in legend" :key="i" :icon="item.icon" :text="item.text"/>
       </div>
-      <div v-show="data" class="space-y-4">
+      <div v-show="data" class="space-y-2">
         <div
           v-for="(item, i) in data"
           :key="i"
-          class="relative flex cursor-pointer justify-between overflow-hidden rounded-xl bg-black px-8 py-4 transition-all duration-100 group"
+          class="relative flex cursor-pointer justify-between overflow-hidden rounded-lg bg-slate-900 px-4 py-2 backdrop-blur transition-all duration-100 group hover:scale-[0.99] hover:rounded-xl hover:bg-slate-900 hover:bg-opacity-90"
           @click="switchInDepth(item)"
           @mouseover="isShowing = i"
         >
-          <div class="flex w-full lg:w-2/3 justify-between gap-x-6">
+          <div class="flex w-full justify-between gap-x-6 lg:w-2/3">
             <div class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-6">
               <SkillInside class="w-fit lg:w-64" icon="<svg viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;> <path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.464 1.464C0 2.93 0 5.286 0 10C0 14.714 0 17.071 1.464 18.535C2.93 20 5.286 20 10 20C14.714 20 17.071 20 18.535 18.535C20 17.072 20 14.714 20 10C20 5.286 20 2.929 18.535 1.464C17.072 0 14.714 0 10 0C5.286 0 2.929 0 1.464 1.464ZM4.424 7.52C4.55134 7.36729 4.73411 7.27139 4.93213 7.25338C5.13015 7.23538 5.32721 7.29675 5.48 7.424L5.757 7.654C6.362 8.158 6.877 8.587 7.233 8.982C7.612 9.402 7.907 9.883 7.907 10.5C7.907 11.117 7.612 11.599 7.233 12.018C6.877 12.413 6.362 12.842 5.757 13.346L5.48 13.576C5.40473 13.6418 5.31705 13.692 5.22213 13.7234C5.1272 13.7549 5.02694 13.7671 4.92724 13.7592C4.82754 13.7513 4.73042 13.7236 4.6416 13.6777C4.55277 13.6317 4.47403 13.5685 4.41001 13.4917C4.34598 13.4148 4.29797 13.326 4.2688 13.2303C4.23962 13.1347 4.22987 13.0341 4.24012 12.9347C4.25037 12.8352 4.28041 12.7388 4.32847 12.6511C4.37654 12.5634 4.44166 12.4862 4.52 12.424L4.754 12.229C5.413 11.679 5.844 11.319 6.12 11.013C6.382 10.723 6.407 10.586 6.407 10.5C6.407 10.414 6.382 10.278 6.12 9.987C5.843 9.681 5.413 9.32 4.754 8.771L4.52 8.576C4.36729 8.44866 4.27139 8.26589 4.25338 8.06787C4.23538 7.86985 4.29675 7.67279 4.424 7.52ZM15.75 13C15.75 13.1989 15.671 13.3897 15.5303 13.5303C15.3897 13.671 15.1989 13.75 15 13.75H10C9.80109 13.75 9.61032 13.671 9.46967 13.5303C9.32902 13.3897 9.25 13.1989 9.25 13C9.25 12.8011 9.32902 12.6103 9.46967 12.4697C9.61032 12.329 9.80109 12.25 10 12.25H15C15.1989 12.25 15.3897 12.329 15.5303 12.4697C15.671 12.6103 15.75 12.8011 15.75 13Z&quot; fill=&quot;currentColor&quot; /> </svg>">
                 {{
@@ -48,17 +48,17 @@
               </SkillInside>
             </div>
           </div>
-          <div v-if="item.in_depth !== null" class="relative z-20 my-auto flex h-4 w-4 text-white lg:group-hover:text-black">
+          <div v-if="item.in_depth !== null" class="relative z-20 my-auto flex h-4 w-4 translate-x-10 text-white transition-all duration-75 group-hover:translate-x-0">
             <IconLibrary name="arrow-right"/>
           </div>
-          <div class="absolute top-0 right-0 bottom-0 left-0 m-auto hidden group-hover:opacity-100 h-12 rounded-lg bg-white opacity-0 transition-all duration-75 w-[99%]   lg:flex  "/>
+          <!--          <div class="absolute top-0 right-0 bottom-0 left-0 m-auto hidden h-10 rounded-sm bg-white opacity-0 transition-all duration-75 w-[99.7%] group-hover:opacity-100 lg:flex"/>-->
         </div>
         <div
-          class="relative m-auto flex h-fit w-fit border-white cursor-pointer justify-between overflow-hidden rounded-xl border-4 hover:border-black bg-black px-20 py-2  font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
+          class="relative m-auto flex h-fit w-fit cursor-pointer justify-between overflow-hidden rounded-md border-4 border-white bg-slate-900 px-20 py-2 font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
           @click="viewSkills"
         >
-          <span class="transition-all duration-75 group-hover:-translate-y-10 text-base lg:text-xl">View All</span>
-          <span class="absolute top-0 right-0 bottom-0 left-0 z-20 m-auto lg:h-5 h-3 w-3 lg:w-5 translate-y-10 text-black transition-all duration-75 group-hover:-translate-y-0">
+          <span class="text-base transition-all duration-75 group-hover:-translate-x-10 lg:text-xl">View All</span>
+          <span class="absolute top-0 right-0 bottom-0 left-0 z-20 m-auto h-3 w-3 translate-x-20 rotate-90 text-slate-900 transition-all duration-75 group-hover:-translate-x-0 lg:h-5 lg:w-5">
             <svg viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.14346 9.60627C4.34238 9.60627 4.53314 9.52726 4.67379 9.3866C4.81445 9.24595 4.89346 9.05519 4.89346 8.85627V2.91627L6.86346 4.88627C7.00564 5.01875 7.19369 5.09088 7.38799 5.08745C7.58229 5.08402 7.76767 5.00531 7.90509 4.8679C8.0425 4.73048 8.12121 4.5451 8.12464 4.3508C8.12807 4.1565 8.05594 3.96845 7.92346 3.82627L4.67346 0.576274C4.53284 0.435823 4.34221 0.356934 4.14346 0.356934C3.94471 0.356934 3.75409 0.435823 3.61346 0.576274L0.363464 3.82627C0.289777 3.89494 0.230675 3.97774 0.189683 4.06974C0.148691 4.16173 0.126649 4.26105 0.124873 4.36175C0.123096 4.46245 0.14162 4.56248 0.179341 4.65587C0.217062 4.74926 0.273207 4.83409 0.344426 4.90531C0.415644 4.97653 0.500478 5.03268 0.593867 5.0704C0.687255 5.10812 0.787284 5.12664 0.887987 5.12487C0.98869 5.12309 1.088 5.10105 1.18 5.06005C1.272 5.01906 1.3548 4.95996 1.42346 4.88627L3.39346 2.91627V8.85627C3.39346 9.27027 3.72946 9.60627 4.14346 9.60627Z" fill="currentColor"/>
             </svg>
@@ -66,11 +66,11 @@
         </div>
       </div>
     </div>
-    <div class="pointer-events-none absolute top-20 lg:top-32 right-0">
-      <img src="/svg/stats.svg" class="h-10 lg:h-44" alt="">
-    </div>
+    <!--    <div class="pointer-events-none absolute top-20 right-0 lg:top-32">-->
+    <!--      <img src="/svg/stats.svg" class="h-10 opacity-50 lg:h-44" alt="">-->
+    <!--    </div>-->
     <div class="">
-      <img src="/svg/bonsai.svg" class="absolute right-4 lg:right-32 -bottom-2 h-[300px] lg:h-[500px]" alt="">
+      <img src="/svg/bonsai.svg" class="absolute right-4 -bottom-10 h-[300px] lg:h-[500px] lg:right-32" alt="">
     </div>
   </div>
   <AllSkills :states="states" :skills="dataPreProcess" @view-in-depth="switchInDepth" @view-skills="viewSkills" @switch-skill="switchSkill"/>
@@ -113,9 +113,9 @@ const switchSkill = (id) => {
 const switchInDepth = (newInDepth) => {
   if (newInDepth === undefined && !states.value.viewingSkills){
     states.value.inDepth = null;
-    document.body.style.overflowY = 'scroll';
+    // document.body.style.overflowY = 'scroll';
   } else {
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     states.value.inDepth = null;
     setTimeout(() => {
       states.value.inDepth = newInDepth;
@@ -139,7 +139,7 @@ const legend = [
   },
   {
     icon: `<svg viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M16 0.5C16.5304 0.5 17.0391 0.710714 17.4142 1.08579C17.7893 1.46086 18 1.96957 18 2.5V14.5C18 15.0304 17.7893 15.5391 17.4142 15.9142C17.0391 16.2893 16.5304 16.5 16 16.5H2C1.46957 16.5 0.960859 16.2893 0.585786 15.9142C0.210714 15.5391 0 15.0304 0 14.5V2.5C0 1.96957 0.210714 1.46086 0.585786 1.08579C0.960859 0.710714 1.46957 0.5 2 0.5H16ZM16 6.5H2V13.5C2.00003 13.7449 2.08996 13.9813 2.25272 14.1644C2.41547 14.3474 2.63975 14.4643 2.883 14.493L3 14.5H15C15.2449 14.5 15.4813 14.41 15.6644 14.2473C15.8474 14.0845 15.9643 13.8603 15.993 13.617L16 13.5V6.5ZM3 2.5C2.73478 2.5 2.48043 2.60536 2.29289 2.79289C2.10536 2.98043 2 3.23478 2 3.5C2 3.76522 2.10536 4.01957 2.29289 4.20711C2.48043 4.39464 2.73478 4.5 3 4.5C3.26522 4.5 3.51957 4.39464 3.70711 4.20711C3.89464 4.01957 4 3.76522 4 3.5C4 3.23478 3.89464 2.98043 3.70711 2.79289C3.51957 2.60536 3.26522 2.5 3 2.5ZM6 2.5C5.73478 2.5 5.48043 2.60536 5.29289 2.79289C5.10536 2.98043 5 3.23478 5 3.5C5 3.76522 5.10536 4.01957 5.29289 4.20711C5.48043 4.39464 5.73478 4.5 6 4.5C6.26522 4.5 6.51957 4.39464 6.70711 4.20711C6.89464 4.01957 7 3.76522 7 3.5C7 3.23478 6.89464 2.98043 6.70711 2.79289C6.51957 2.60536 6.26522 2.5 6 2.5ZM9 2.5C8.73478 2.5 8.48043 2.60536 8.29289 2.79289C8.10536 2.98043 8 3.23478 8 3.5C8 3.76522 8.10536 4.01957 8.29289 4.20711C8.48043 4.39464 8.73478 4.5 9 4.5C9.26522 4.5 9.51957 4.39464 9.70711 4.20711C9.89464 4.01957 10 3.76522 10 3.5C10 3.23478 9.89464 2.98043 9.70711 2.79289C9.51957 2.60536 9.26522 2.5 9 2.5Z" fill="currentColor"/> </svg>`,
-    text: `Projects Using Software`,
+    text: `Projects`,
   },
 ]
 const data = ref([]);

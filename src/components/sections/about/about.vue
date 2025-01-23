@@ -1,8 +1,8 @@
 <template>
-  <div class="relative z-10 flex md:py-20">
+  <div class="relative z-10 flex md:py-14">
     <div class="container m-auto py-5 space-y-4">
       <div class="px-5">
-        <title-head jp="心の旅は深く、夢と現実が織りなす物語。" :dark="false">
+        <title-head jp="心の旅は深く、夢と現実が織りなす物語。" :dark="false" color="text-[#73C900]">
           <template #title>
             About
           </template>

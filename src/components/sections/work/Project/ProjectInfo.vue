@@ -1,11 +1,11 @@
 <template>
   <div class="hidden max-h-full w-fit max-w-full flex-col justify-between lg:flex">
-    <div class="space-y-4">
+    <div class="space-y-4 flex-1">
       <div class="font-black uppercase leading-none text-white font-barlow text-[4rem] animate__animated animate__fadeIn animate__faster">
         {{ project.name }}
       </div>
-      <div class="w-full space-y-2 py-4">
-        <p class="text-justify font-semibold uppercase  max-h-[40vh] overflow-y-scroll pr-10 whitespace-pre-line font-jet animate__animated animate__fadeIn animate__faster" v-html="deeper(project.description)"/>
+      <div class="w-full space-y-2 py-4 h-full ">
+        <p class="text-justify font-semibold uppercase h-full max-h-[40vh] overflow-y-scroll pr-10 whitespace-pre-line font-jet animate__animated animate__fadeIn animate__faster" v-html="deeper(project.description)"/>
       </div>
     </div>
     <div class="space-y-8">

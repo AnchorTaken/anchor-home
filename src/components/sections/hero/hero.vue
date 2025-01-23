@@ -35,10 +35,6 @@
       </div>
       <img src="/svg/design.svg" class="pointer-events-none absolute top-0 right-0 bottom-0 left-0 m-auto h-fit w-fit rotate-90 animate__animated animate__fadeIn scale-[.4] sm:rotate-0 md:scale-[.4] lg:scale-[.55] xl:scale-95 2xl:scale-100" alt="">
     </div>
-    <div class="absolute bottom-12 xl:bottom-0 xl:left-5">
-      <img src="/svg/barcode-1.svg" class="pointer-events-none hidden xl:flex" alt="">
-      <img src="/svg/barcode-1-hor.svg" class="pointer-events-none scale-[4] md:scale-100 xl:hidden" alt="">
-    </div>
   </div>
 </template>
 <script setup>

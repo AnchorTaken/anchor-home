@@ -1,12 +1,9 @@
 <template>
-  <div class="relative">
-    <div class="relative overflow-hidden bg-black py-5 text-white lg:py-32">
+  <div class="relative ">
+    <div class="relative overflow-hidden bg-slate-900 py-5 pb-20  text-white">
       <div class="container m-auto flex max-h-full flex-col px-5 space-y-5">
-        <title-head jp="作品は感覚と想像の糸で織りなし、心を静かに貫く。" :dark="true">
+        <title-head jp="作品は感覚と想像の糸で織りなし、心を静かに貫く。" :dark="true" color="text-[#FF8700]">
           <template #title>
-            <div class="leading-[6rem] pr-5 lg:leading-[12rem]">
-              My
-            </div>
             <div class="leading-[6rem] lg:leading-[12rem]">
               Work
             </div>
@@ -18,11 +15,11 @@
         </div>
 
         <div class="flex flex-col justify-between lg:space-x-10 lg:flex-row">
-          <div class="relative flex max-h-full min-h-full overflow-hidden bg-black h-[84vh] lg:h-[80vh] lg:w-4/12">
+          <div class="relative flex max-h-full min-h-full overflow-hidden bg-slate-900 h-[84vh] lg:h-[80vh] lg:w-4/12">
             <img
               v-for="(project, i) in data"
               :key="i"
-              class="h-full w-full rounded-xl bg-black object-cover object-top animate__animated animate__fadeIn animate__faster"
+              class="h-full w-full rounded-xl bg-slate-900 object-top animate__animated animate__fadeIn animate__faster"
               :src="project.img_url"
               :class="states.projectIndex !== i && 'hidden'"
               alt=""
@@ -52,19 +49,13 @@
 
         <ContentNav :data="data" :content-index="states.projectIndex" @next-content="nextProject" @prev-content="prevProject"/>
       </div>
-      <div class="pointer-events-none absolute top-16 right-0 lg:top-32">
-        <img src="/svg/work.svg" class="h-14 lg:h-44" alt="">
-      </div>
+      <!--      <div class="pointer-events-none absolute top-16 right-0 lg:top-12">-->
+      <!--        <img src="/svg/work.svg" class="h-14 lg:h-44" alt="">-->
+      <!--      </div>-->
     </div>
 
     <div class="absolute top-9 right-5 hidden">
       <img src="/svg/barcode-2.svg" class="pointer-events-none" alt="">
-    </div>
-    <div class="">
-      <div class="h-3 w-full bg-black opacity-80 lg:h-10"/>
-      <div class="h-3 w-full bg-black opacity-60 lg:h-10"/>
-      <div class="h-3 w-full bg-black opacity-40 lg:h-10"/>
-      <div class="h-3 w-full bg-black opacity-20 lg:h-10"/>
     </div>
   </div>
 

@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-    <div class="relative overflow-hidden bg-black px-5 py-10 text-white lg:pt-44 lg:pb-52">
+    <div class="relative overflow-hidden bg-slate-900 px-5 py-10 text-white">
       <div class="container m-auto flex max-h-full flex-col space-y-6">
-        <title-head jp="チームと共に成長し、夢を実現することに全力を尽くします。" :dark="true">
+        <title-head jp="チームと共に成長し、夢を実現することに全力を尽くします。" :dark="true" color="text-[#0095E9]">
           <template #title>
             <div class="leading-[6rem] lg:leading-none">
               Clients

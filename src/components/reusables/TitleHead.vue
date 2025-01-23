@@ -1,18 +1,32 @@
 <template>
-  <div class=" space-y-4">
-    <div class="">
-      <div class="text-base font-bold leading-none font-noto lg:text-xl w-8/12 lg:w-full 2xl:text-2xl" :class="dark ? 'text-white' : 'text-black'">
-        {{ jp }}
+  <div class="space-x-12 flex ">
+    <div class=" ">
+      <!--      <div class="w-8/12 text-base font-bold leading-none font-noto lg:w-full lg:text-xl 2xl:text-2xl" :class="dark ? 'text-white' : 'text-slate-700'">-->
+      <!--        {{ jp }}-->
+      <!--      </div>-->
+      <div class="relative w-fit">
+        <h1
+          class="flex flex-col relative font-black z-10 uppercase leading-none font-barlow text-[7rem] lg:text-[10rem] lg:flex-row 2xl:text-[10rem]"
+          :class="dark ? 'text-white' : 'text-slate-900'"
+        >
+          <slot name="title"/>
+        </h1>
+        <h1
+          class="flex flex-col absolute top-1 -right-1 font-black uppercase leading-none font-barlow text-[7rem] animate__animated animate__fadeInUpSmall animate__fastest lg:text-[10rem] lg:flex-row 2xl:text-[10rem]"
+          :class="color"
+        >
+          <slot name="title"/>
+        </h1>
       </div>
-      <h1 class="font-black flex flex-col lg:flex-row uppercase leading-none font-barlow text-[7rem] lg:text-[10rem] 2xl:text-[14rem]" :class="dark ? 'text-white' : 'text-black'">
-        <slot name="title"/>
-      </h1>
     </div>
-    <p class="lg:text-justify font-semibold font-jet lg:w-8/12 uppercase 2xl:text-2xl" :class="dark ? 'text-white' : 'text-black'">
+    <p
+      class="font-semibold my-auto h-fit uppercase pt-4 font-jet lg:w-6/12 lg:text-justify 2xl:text-xl"
+      :class="dark ? 'text-white' : 'text-slate-900'"
+    >
       <slot/>
     </p>
   </div>
 </template>
 <script setup>
-const props = defineProps(['title', 'jp', 'dark'])
+const props = defineProps(['title', 'jp', 'dark', 'color'])
 </script>
