@@ -1,6 +1,6 @@
 <template>
-  <div class="relative ">
-    <div class="relative overflow-hidden bg-slate-900 py-5 pb-20  text-white">
+  <div class="relative">
+    <div class="relative overflow-hidden bg-slate-900 py-5 pb-20 text-white">
       <div class="container m-auto flex max-h-full flex-col px-5 space-y-5">
         <title-head jp="作品は感覚と想像の糸で織りなし、心を静かに貫く。" :dark="true" color="text-[#FF8700]">
           <template #title>
@@ -13,13 +13,13 @@
         <div class="hidden space-x-4 lg:flex">
           <ProjectButton v-for="(project, i) in data" :key="i" :name="project.name" :active="states.projectIndex === i" @click="switchWork(project, i)"/>
         </div>
-
+        <ContentNav :data="data" :content-index="states.projectIndex" @next-content="nextProject" @prev-content="prevProject"/>
         <div class="flex flex-col justify-between lg:space-x-10 lg:flex-row">
-          <div class="relative flex max-h-full min-h-full overflow-hidden bg-slate-900 h-[84vh] lg:h-[80vh] lg:w-4/12">
+          <div class="relative flex max-h-full   overflow-hidden bg-slate-900 min-h-[64vh] lg:h-[80vh] lg:w-4/12">
             <img
               v-for="(project, i) in data"
               :key="i"
-              class="h-full w-full rounded-xl bg-slate-900 object-top animate__animated animate__fadeIn animate__faster"
+              class="h-full w-full rounded-xl bg-slate-900 object-contain object-top animate__animated animate__fadeIn animate__faster"
               :src="project.img_url"
               :class="states.projectIndex !== i && 'hidden'"
               alt=""
@@ -46,8 +46,6 @@
             <ProjectInfo :project="project"/>
           </div>
         </div>
-
-        <ContentNav :data="data" :content-index="states.projectIndex" @next-content="nextProject" @prev-content="prevProject"/>
       </div>
       <!--      <div class="pointer-events-none absolute top-16 right-0 lg:top-12">-->
       <!--        <img src="/svg/work.svg" class="h-14 lg:h-44" alt="">-->
