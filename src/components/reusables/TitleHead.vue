@@ -1,5 +1,5 @@
 <template>
-  <div class="space-x-12 flex ">
+  <div class="lg:space-x-12 flex-col lg:flex-row flex ">
     <div class=" ">
       <!--      <div class="w-8/12 text-base font-bold leading-none font-noto lg:w-full lg:text-xl 2xl:text-2xl" :class="dark ? 'text-white' : 'text-slate-700'">-->
       <!--        {{ jp }}-->

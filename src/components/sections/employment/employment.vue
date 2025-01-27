@@ -1,6 +1,6 @@
 <template>
-  <div class="relative">
-    <div class="relative overflow-hidden bg-slate-900 px-5 py-10 text-white">
+  <div class="relative flex h-full flex-col">
+    <div class="relative h-full bg-slate-900 px-5 pt-10 pb-10 text-white">
       <div class="container m-auto flex max-h-full flex-col space-y-6">
         <title-head jp="チームと共に成長し、夢を実現することに全力を尽くします。" :dark="true" color="text-[#0095E9]">
           <template #title>
@@ -10,6 +10,7 @@
           </template>
           My humble list of clients that I have worked with
         </title-head>
+
 
         <div class="hidden justify-between lg:flex">
           <button class="flex select-none space-x-4 group" @click="previousClient">
@@ -39,17 +40,19 @@
           @next-content="previousClient"
           @prev-content="nextClient"
         />
-        <div
-          v-for="(client, i) in data"
-          :key="i"
-          class="space-y-6 animate__animated animate__fadeIn animate__faster"
-          :class="states.clientIndex !== i && 'hidden'"
-        >
-          <WriteCategory v-if="client.background" title="Background" :content="client.background"/>
-          <WriteCategory v-if="client.growth" title="Growth" :content="client.growth" @read-more="readMore"/>
-          <WriteCategory v-if="client.needs" title="Needs" :content="client.needs" @read-more="readMore"/>
-          <WriteCategory v-if="client.responsibility" title="Responsibility" :content="client.responsibility" @read-more="readMore"/>
-          <WriteCategory v-if="client.coms" title="Communication" :content="client.coms" @read-more="readMore"/>
+        <div class="overflow-y-auto pr-4">
+          <div
+            v-for="(client, i) in data"
+            :key="i"
+            class="space-y-6 animate__animated animate__fadeIn animate__faster"
+            :class="states.clientIndex !== i && 'hidden'"
+          >
+            <WriteCategory v-if="client.background" title="Background" :content="client.background"/>
+            <WriteCategory v-if="client.growth" title="Growth" :content="client.growth" @read-more="readMore"/>
+            <WriteCategory v-if="client.needs" title="Needs" :content="client.needs" @read-more="readMore"/>
+            <WriteCategory v-if="client.responsibility" title="Responsibility" :content="client.responsibility" @read-more="readMore"/>
+            <WriteCategory v-if="client.coms" title="Communication" :content="client.coms" @read-more="readMore"/>
+          </div>
         </div>
       </div>
     </div>
@@ -114,9 +117,9 @@ const readMore = (title, content) => {
   if (states.value.readMore.title === null && states.value.readMore.content === null){
     states.value.readMore.title = title;
     states.value.readMore.content = content;
-    document.body.style.overflowY = 'hidden';
+    // document.body.style.overflowY = 'hidden';
   } else {
-    document.body.style.overflowY = 'scroll';
+    // document.body.style.overflowY = 'scroll';
     states.value.readMore.title = null;
     states.value.readMore.content = null;
   }

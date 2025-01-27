@@ -21,7 +21,7 @@
             <path d="M443.561 216C442.138 216 441.019 215.593 440.206 214.78C439.393 213.967 438.986 212.848 438.986 211.425V7.07504C438.986 5.65171 439.393 4.53338 440.206 3.72005C441.019 2.90671 442.138 2.50005 443.561 2.50005H491.751C493.174 2.50005 494.293 2.90671 495.106 3.72005C495.919 4.53338 496.326 5.65171 496.326 7.07504V211.425C496.326 212.848 495.919 213.967 495.106 214.78C494.293 215.593 493.174 216 491.751 216H443.561Z" fill="white"/>
             <path d="M603.757 7.07504C603.757 5.65171 604.164 4.53338 604.977 3.72005C605.791 2.90671 606.909 2.50005 608.332 2.50005H655.912C657.336 2.50005 658.454 2.90671 659.267 3.72005C660.081 4.53338 660.487 5.65171 660.487 7.07504V211.425C660.487 212.848 660.081 213.967 659.267 214.78C658.454 215.593 657.336 216 655.912 216H601.622C598.979 216 597.352 214.678 596.742 212.035L573.562 119.62C573.359 119.01 572.952 118.705 572.342 118.705C571.732 118.705 571.427 119.112 571.427 119.925L572.037 211.425C572.037 212.848 571.631 213.967 570.817 214.78C570.004 215.593 568.886 216 567.462 216H519.882C518.459 216 517.341 215.593 516.527 214.78C515.714 213.967 515.307 212.848 515.307 211.425V7.07504C515.307 5.65171 515.714 4.53338 516.527 3.72005C517.341 2.90671 518.459 2.50005 519.882 2.50005H573.562C576.206 2.50005 577.832 3.82171 578.442 6.46505L601.927 99.1851C602.131 99.9984 602.537 100.405 603.147 100.405C603.757 100.405 604.062 99.9984 604.062 99.1851L603.757 7.07504Z" fill="white"/>
           </svg>
-          <div class="bg-black transition-all duration-150 my-auto top-0 bottom-0 absolute w-full z-10" :class="curtainsOpen ? 'h-full' : 'h-0'"/>
+          <div class="absolute top-0 bottom-0 z-10 my-auto w-full bg-black transition-all duration-150" :class="curtainsOpen ? 'h-full' : 'h-0'"/>
         </div>
         <svg class="m-auto -mr-10 w-1/2" viewBox="0 0 301 3" fill="none" xmlns="http://www.w3.org/2000/svg" :class="curtainsOpen && 'animate__animated animate__fadeOutUp animate__faster'">
           <path d="M0.462078 2.68801C0.286078 2.68801 0.286078 2.49001 0.462078 2.09401C0.682078 1.65401 0.946078 1.21401 1.25408 0.774015C1.56208 0.334014 1.78208 0.114014 1.91408 0.114014H14.9821C15.2461 0.114014 15.2681 0.334014 15.0481 0.774015C14.8721 1.21401 14.6081 1.65401 14.2561 2.09401C13.9481 2.49001 13.6841 2.68801 13.4641 2.68801H0.462078Z" fill="white"/>
@@ -38,33 +38,10 @@
     <div class="absolute top-0 left-0 h-full bg-black transition-all duration-700 delay-3s" :class="transitionComplete ? 'w-1/2' : 'w-0'"/>
     <div class="absolute top-0 right-0 h-full bg-black transition-all duration-700 delay-4s" :class="transitionComplete ? 'w-1/2' : 'w-0'"/>
   </div>
-  <div class="flex h-screen w-full">
-    <div class="z-10 h-full w-4 flex-col">
-      <div class="flex h-full flex-col bg-slate-200">
-        <div class="relative flex-1 cursor-pointer bg-[#F60000] group" @click="setCurrentStage('skills')">
-          <div class="absolute top-0 select-none bottom-0 left-full my-auto h-fit -translate-x-24 rotate-90 text-4xl font-black uppercase text-[#F60000] transition-all duration-75 font-barlow group-hover:translate-x-0" :class="currentStage === 'skills' ? '!translate-x-0' : ''">
-            Stats
-          </div>
-        </div>
-        <div class="relative flex-1 cursor-pointer bg-[#FF8700] group" @click="setCurrentStage('work')">
-          <div class="absolute top-0 select-none bottom-0 left-full my-auto h-fit -translate-x-24 rotate-90 text-4xl font-black uppercase text-[#FF8700] transition-all duration-75 font-barlow group-hover:translate-x-0" :class="currentStage === 'work' ? '!translate-x-0' : ''">
-            Work
-          </div>
-        </div>
-        <div class="relative flex-1 cursor-pointer bg-[#73C900] group" @click="setCurrentStage('about')">
-          <div class="absolute top-0 select-none bottom-0 left-full my-auto h-fit -translate-x-24 rotate-90 text-4xl font-black uppercase text-[#73C900] transition-all duration-75 font-barlow group-hover:translate-x-0" :class="currentStage === 'about' ? '!translate-x-0' : ''">
-            About
-          </div>
-        </div>
-        <div class="relative flex-1 cursor-pointer bg-[#0095E9] group" @click="setCurrentStage('clients')">
-          <div class="absolute top-0 select-none bottom-0 left-full my-auto -translate-x-24 rotate-90 text-4xl font-black uppercase h-2 text-[#0095E9] transition-all duration-75 font-barlow group-hover:translate-x-0" :class="currentStage === 'clients' ? '!translate-x-0' : ''">
-            Clients
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="flex h-[100svh] w-full lg:flex-row flex-col-reverse">
+    <StageSelect :current-stage="currentStage" @set-current-stage="setCurrentStage"/>
 
-    <div class="w-full overflow-auto">
+    <div class="h-full w-full overflow-auto">
       <Skills v-if="currentStage === 'skills'"/>
       <Work v-if="currentStage === 'work'"/>
       <About v-if="currentStage === 'about'"/>
@@ -83,14 +60,12 @@ import Work from "~/src/components/sections/work/work.vue";
 import Skills from "~/src/components/sections/skills/skills.vue";
 import Employment from "~/src/components/sections/employment/employment.vue";
 import Closure from "~/src/components/sections/closure/closure.vue";
+import StageSelect from "~/src/components/StageSelect.vue";
 
 const currentStage = ref('skills');
 const openCurtains = ref(false)
 const transitionComplete = ref(true);
 const curtainsOpen = ref(false);
-
-const alreadySeen = ref();
-
 
 const setCurrentStage = (stage) => {
   currentStage.value = stage;
