@@ -22,16 +22,22 @@
           <div class="flex w-full justify-between gap-x-6 lg:w-2/3">
             <div class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-6">
               <SkillInside
-                class="w-fit lg:w-64"
+                class="w-fit lg:w-64 "
                 icon="<svg viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;> <path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M1.464 1.464C0 2.93 0 5.286 0 10C0 14.714 0 17.071 1.464 18.535C2.93 20 5.286 20 10 20C14.714 20 17.071 20 18.535 18.535C20 17.072 20 14.714 20 10C20 5.286 20 2.929 18.535 1.464C17.072 0 14.714 0 10 0C5.286 0 2.929 0 1.464 1.464ZM4.424 7.52C4.55134 7.36729 4.73411 7.27139 4.93213 7.25338C5.13015 7.23538 5.32721 7.29675 5.48 7.424L5.757 7.654C6.362 8.158 6.877 8.587 7.233 8.982C7.612 9.402 7.907 9.883 7.907 10.5C7.907 11.117 7.612 11.599 7.233 12.018C6.877 12.413 6.362 12.842 5.757 13.346L5.48 13.576C5.40473 13.6418 5.31705 13.692 5.22213 13.7234C5.1272 13.7549 5.02694 13.7671 4.92724 13.7592C4.82754 13.7513 4.73042 13.7236 4.6416 13.6777C4.55277 13.6317 4.47403 13.5685 4.41001 13.4917C4.34598 13.4148 4.29797 13.326 4.2688 13.2303C4.23962 13.1347 4.22987 13.0341 4.24012 12.9347C4.25037 12.8352 4.28041 12.7388 4.32847 12.6511C4.37654 12.5634 4.44166 12.4862 4.52 12.424L4.754 12.229C5.413 11.679 5.844 11.319 6.12 11.013C6.382 10.723 6.407 10.586 6.407 10.5C6.407 10.414 6.382 10.278 6.12 9.987C5.843 9.681 5.413 9.32 4.754 8.771L4.52 8.576C4.36729 8.44866 4.27139 8.26589 4.25338 8.06787C4.23538 7.86985 4.29675 7.67279 4.424 7.52ZM15.75 13C15.75 13.1989 15.671 13.3897 15.5303 13.5303C15.3897 13.671 15.1989 13.75 15 13.75H10C9.80109 13.75 9.61032 13.671 9.46967 13.5303C9.32902 13.3897 9.25 13.1989 9.25 13C9.25 12.8011 9.32902 12.6103 9.46967 12.4697C9.61032 12.329 9.80109 12.25 10 12.25H15C15.1989 12.25 15.3897 12.329 15.5303 12.4697C15.671 12.6103 15.75 12.8011 15.75 13Z&quot; fill=&quot;currentColor&quot; /> </svg>"
               >
-                .
+                <div class="text-transparent">
+                  .
+                </div>
               </SkillInside>
 
               <SkillInside
                 class="w-fit lg:w-52"
                 icon="<svg viewBox=&quot;0 0 21 20&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;> <path d=&quot;M10.6667 0C16.1897 0 20.6667 4.477 20.6667 10C20.6667 15.523 16.1897 20 10.6667 20C5.14375 20 0.666748 15.523 0.666748 10C0.666748 4.477 5.14375 0 10.6667 0ZM10.6667 4C10.4015 4 10.1472 4.10536 9.95964 4.29289C9.77211 4.48043 9.66675 4.73478 9.66675 5V10C9.6668 10.2652 9.7722 10.5195 9.95975 10.707L12.9597 13.707C13.1484 13.8892 13.401 13.99 13.6631 13.9877C13.9253 13.9854 14.1762 13.8802 14.3616 13.6948C14.547 13.5094 14.6521 13.2586 14.6544 12.9964C14.6567 12.7342 14.5559 12.4816 14.3737 12.293L11.6667 9.586V5C11.6667 4.73478 11.5614 4.48043 11.3739 4.29289C11.1863 4.10536 10.932 4 10.6667 4Z&quot; fill=&quot;currentColor&quot; /> </svg>"
-              />
+              >
+                <div class="text-transparent">
+                  .
+                </div>
+              </SkillInside>
             </div>
             <div class="flex flex-col gap-x-6 gap-y-2 lg:flex-row">
               <SkillInside
@@ -105,7 +111,7 @@
           class="relative m-auto flex h-fit w-fit cursor-pointer justify-between overflow-hidden rounded-md bg-slate-900 px-20 py-2 font-semibold uppercase leading-none text-white transition-all duration-75 group font-jet hover:bg-white"
           @click="viewSkills"
         >
-          <span class="text-base transition-all duration-75 group-hover:-translate-x-10 lg:text-xl">View All</span>
+          <span class="text-lg transition-all duration-75 group-hover:-translate-x-10 lg:text-xl">View All</span>
           <span class="absolute top-0 right-0 bottom-0 left-0 z-20 m-auto size-5 lg:size-4  translate-x-20 rotate-90 text-slate-900 transition-all duration-75 group-hover:-translate-x-0 lg:h-5 lg:w-5">
             <svg viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path

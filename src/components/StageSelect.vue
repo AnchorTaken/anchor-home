@@ -1,5 +1,5 @@
 <template>
-  <div class="z-30 h-14 w-full lg:h-full lg:w-4 lg:flex-col">
+  <div class="z-10 h-14 w-full lg:min-h-[100svh]   lg:w-4 lg:flex-col">
     <div class="flex h-full bg-slate-200 lg:flex-col">
       <div
         class="relative flex-1  cursor-pointer w-full bg-[#F60000] group"
@@ -37,18 +37,18 @@
           About
         </div>
       </div>
-      <div
-        class="relative flex-1 cursor-pointer bg-[#0095E9] group"
-        :class="currentStage === 'clients' ? 'basis-1/4' : ''"
-        @click="emit('setCurrentStage', 'clients')"
-      >
-        <div
-          class="absolute top-0 select-none left-0 right-0 bottom-0 lg:left-full m-auto lg:-translate-x-24 lg:rotate-90 text-4xl font-black uppercase h-11 lg:text-[#0095E9] lg:transition-all lg:duration-75   font-barlow lg:group-hover:translate-x-0"
-          :class="currentStage === 'clients' ? 'lg:!translate-x-0 w-fit text-white animate__animated animate__fadeIn animate__fastest' : '!-translate-y-0 w-0 overflow-hidden'"
-        >
-          Clients
-        </div>
-      </div>
+      <!--      <div-->
+      <!--        class="relative flex-1 cursor-pointer bg-[#0095E9] group"-->
+      <!--        :class="currentStage === 'clients' ? 'basis-1/4' : ''"-->
+      <!--        @click="emit('setCurrentStage', 'clients')"-->
+      <!--      >-->
+      <!--        <div-->
+      <!--          class="absolute top-0 select-none left-0 right-0 bottom-0 lg:left-full m-auto lg:-translate-x-24 lg:rotate-90 text-4xl font-black uppercase h-11 lg:text-[#0095E9] lg:transition-all lg:duration-75   font-barlow lg:group-hover:translate-x-0"-->
+      <!--          :class="currentStage === 'clients' ? 'lg:!translate-x-0 w-fit text-white animate__animated animate__fadeIn animate__fastest' : '!-translate-y-0 w-0 overflow-hidden'"-->
+      <!--        >-->
+      <!--          Clients-->
+      <!--        </div>-->
+      <!--      </div>-->
     </div>
   </div>
 </template>

@@ -1,10 +1,10 @@
 <template>
-  <div class="fixed right-0 bottom-10 left-0 z-50 mx-auto w-6/12">
+  <div class="fixed right-0 bottom-10 left-0 z-50 px-2 mx-auto lg:w-6/12">
     <div class="relative z-10 ">
       <div class="relative z-10 mx-auto my-auto h-fit rounded-3xl bg-slate-900 p-3 text-white transition-all duration-100 space-y-4 lg:p-4">
         <div class="relative z-10 flex w-full justify-between">
           <div class="flex flex-col justify-between gap-y-2 lg:flex-row lg:gap-x-4">
-            <div class="flex gap-x-4">
+            <div class="flex gap-x-2 lg:gap-x-4">
               <div class="z-10 flex w-fit rounded-full bg-white px-3 py-2 space-x-3 lg:px-4 lg:py-2">
                 <i class="my-auto flex h-4 w-4 text-slate-900 lg:h-5 lg:w-5">
                   <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@
                 <span class="my-auto flex h-fit text-lg font-semibold uppercase leading-none text-slate-900 font-jet lg:text-2xl-2xl"> {{ formatTime(inDepth.time) }}</span>
               </div>
             </div>
-            <div class="flex gap-x-4">
+            <div class="flex gap-x-2 lg:gap-x-4">
               <div v-if="inDepth.syntax !== 'na'" class="z-10 flex rounded-full bg-white px-4 py-2 space-x-3">
                 <i class="my-auto flex h-6 w-6 text-slate-900">
                   <svg viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">

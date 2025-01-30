@@ -20,10 +20,10 @@
         </div>
       </div>
     </div>
-    <div class="flex h-full flex-col justify-between space-y-6">
+    <div class="flex h-full flex-col justify-between space-y-6 pb-4">
       <div class="container mx-auto flex flex-1 flex-col overflow-auto space-y-6 lg:px-5">
         <div class="px-5 pt-5 lg:p-0">
-          <div class="flex space-x-14">
+          <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-14">
             <div class="flex flex-col font-black uppercase leading-none text-slate-900 font-barlow text-[7rem] lg:space-x-6 lg:flex-row xl:text-[10rem] 2xl:text-[8rem]">
               <div class="leading-[6rem] lg:leading-[10rem] 2xl:leading-[8rem]">
                 Stats
@@ -41,7 +41,7 @@
         </div>
         <div class="flex-1 overflow-y-scroll space-y-4">
           <div class="px-5 space-y-2 lg:px-0">
-            <div v-for="(categories, i) in skills" :key="i" class="cursor-pointer justify-between bg-slate-900 transition-all duration-100 space-y-4" :class="states.currentSkill === i ? 'rounded-2xl px-5 py-3 lg:px-6 lg:py-4 ' : 'lg:rounded-xl px-4 py-2 lg:px-4 lg:py-3 hover:scale-[0.99] hover:bg-slate-800' " @click="$emit('switchSkill', i)">
+            <div v-for="(categories, i) in skills" :key="i" class="cursor-pointer justify-between bg-slate-900 transition-all duration-100 space-y-4" :class="states.currentSkill === i ? 'rounded-2xl px-5 py-5 lg:px-6 lg:py-4  ' : 'lg:rounded-xl rounded-xl px-4 py-4 lg:px-4 lg:py-3 lg:hover:scale-[0.99] lg:hover:bg-slate-800' " @click="$emit('switchSkill', i)">
               <div class="flex w-full select-none justify-between space-x-6">
                 <div class="flex w-full justify-between space-x-6">
                   <div class="flex space-x-3">
@@ -50,7 +50,7 @@
                         <path d="M12.341 2.46154H17.4391C17.795 2.4615 18.1469 2.53276 18.4725 2.67076C18.798 2.80876 19.0901 3.01048 19.3301 3.26304C19.57 3.51561 19.7526 3.81348 19.8662 4.13765C19.9797 4.46183 20.0217 4.80519 19.9895 5.14585L19.1739 13.7612C19.1161 14.3728 18.8226 14.9415 18.351 15.3558C17.8793 15.77 17.2637 15.9998 16.6249 16H3.37499C2.73617 15.9998 2.12051 15.77 1.64888 15.3558C1.17725 14.9415 0.883718 14.3728 0.825904 13.7612L0.0103509 5.14585C-0.0431184 4.57582 0.111713 4.0057 0.448215 3.53354L0.398283 2.46154C0.398283 1.8087 0.66806 1.1826 1.14827 0.720968C1.62847 0.25934 2.27978 0 2.95889 0H7.66017C8.33923 0.000139415 8.99042 0.259571 9.47052 0.721231L10.5306 1.74031C11.0107 2.20197 11.6619 2.4614 12.341 2.46154ZM1.68627 2.60923C1.96111 2.51159 2.25302 2.46236 2.562 2.46154H9.47052L8.56534 1.59138C8.32529 1.36055 7.9997 1.23084 7.66017 1.23077H2.95889C2.62351 1.23071 2.30149 1.35717 2.06207 1.58295C1.82266 1.80873 1.68496 2.1158 1.67859 2.43815L1.68627 2.60923Z" fill="currentColor"/>
                       </svg>
                     </i>
-                    <span class="my-auto flex h-fit font-semibold uppercase leading-none text-white font-jet lg:text-xl">{{ categories.category }}</span>
+                    <span class="my-auto flex h-fit font-semibold uppercase leading-none text-white font-jet  lg:text-xl">{{ categories.category }}</span>
                   </div>
 
                   <div v-if="countExpert(categories)" class="flex space-x-3">
@@ -59,7 +59,7 @@
                         <path d="M6 0H14C15.5913 0 17.1174 0.632141 18.2426 1.75736C19.3679 2.88258 20 4.4087 20 6V14C20 15.5913 19.3679 17.1174 18.2426 18.2426C17.1174 19.3679 15.5913 20 14 20H6C4.4087 20 2.88258 19.3679 1.75736 18.2426C0.632141 17.1174 0 15.5913 0 14L0 6C0 4.4087 0.632141 2.88258 1.75736 1.75736C2.88258 0.632141 4.4087 0 6 0ZM12 9C11.7348 9 11.4804 9.10536 11.2929 9.29289C11.1054 9.48043 11 9.73478 11 10C11 10.2652 11.1054 10.5196 11.2929 10.7071C11.4804 10.8946 11.7348 11 12 11H15C15.2652 11 15.5196 10.8946 15.7071 10.7071C15.8946 10.5196 16 10.2652 16 10C16 9.73478 15.8946 9.48043 15.7071 9.29289C15.5196 9.10536 15.2652 9 15 9H12ZM10 13C9.73478 13 9.48043 13.1054 9.29289 13.2929C9.10536 13.4804 9 13.7348 9 14C9 14.2652 9.10536 14.5196 9.29289 14.7071C9.48043 14.8946 9.73478 15 10 15H15C15.2652 15 15.5196 14.8946 15.7071 14.7071C15.8946 14.5196 16 14.2652 16 14C16 13.7348 15.8946 13.4804 15.7071 13.2929C15.5196 13.1054 15.2652 13 15 13H10ZM10 5C9.73478 5 9.48043 5.10536 9.29289 5.29289C9.10536 5.48043 9 5.73478 9 6C9 6.26522 9.10536 6.51957 9.29289 6.70711C9.48043 6.89464 9.73478 7 10 7H15C15.2652 7 15.5196 6.89464 15.7071 6.70711C15.8946 6.51957 16 6.26522 16 6C16 5.73478 15.8946 5.48043 15.7071 5.29289C15.5196 5.10536 15.2652 5 15 5H10ZM5.828 10.243L5.121 9.536C5.02875 9.44049 4.91841 9.36431 4.7964 9.3119C4.6744 9.25949 4.54318 9.2319 4.4104 9.23075C4.27762 9.2296 4.14594 9.2549 4.02305 9.30518C3.90015 9.35546 3.7885 9.42971 3.69461 9.52361C3.60071 9.6175 3.52646 9.72915 3.47618 9.85205C3.4259 9.97494 3.4006 10.1066 3.40175 10.2394C3.4029 10.3722 3.43049 10.5034 3.4829 10.6254C3.53531 10.7474 3.61149 10.8578 3.707 10.95L5.121 12.364C5.21387 12.457 5.32416 12.5307 5.44556 12.5811C5.56696 12.6314 5.69708 12.6573 5.8285 12.6573C5.95992 12.6573 6.09004 12.6314 6.21144 12.5811C6.33284 12.5307 6.44313 12.457 6.536 12.364L9.364 9.536C9.55177 9.34849 9.65737 9.09407 9.65756 8.82871C9.65774 8.56334 9.55251 8.30877 9.365 8.121C9.17749 7.93323 8.92307 7.82763 8.65771 7.82744C8.39234 7.82726 8.13777 7.93249 7.95 8.12L5.828 10.242V10.243Z" fill="currentColor"/>
                       </svg>
                     </i>
-                    <span class="my-auto flex h-fit text-xl font-semibold uppercase leading-none text-white font-jet">{{ countExpert(categories) }}</span>
+                    <span class="my-auto flex h-fit lg:text-xl font-semibold uppercase leading-none text-white text-base font-jet">{{ countExpert(categories) }}</span>
                   </div>
                 </div>
                 <div class="my-auto flex h-3 w-3 transition-all duration-100 lg:h-5 lg:w-5" :class="states.currentSkill === i ? '-rotate-90':'rotate-45  '">
@@ -108,7 +108,6 @@
           </div>
         </div>
       </div>
-      <PoloColors class="flex h-5"/>
     </div>
   </div>
 </template>

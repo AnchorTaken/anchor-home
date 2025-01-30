@@ -1,6 +1,6 @@
 <template>
   <div class="hidden max-h-full w-fit max-w-full flex-col justify-between lg:flex">
-    <div class="space-y-4 flex-1">
+    <div class="space-y-4 flex-1 basis-1/3 h-full">
       <div class="font-black uppercase leading-none text-white font-barlow text-[4rem] animate__animated animate__fadeIn animate__faster">
         {{ project.name }}
       </div>

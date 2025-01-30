@@ -1,11 +1,11 @@
 <template>
-  <div class="space-y-2">
+  <div class="space-y-2 ">
     <div class="font-black uppercase leading-none text-white font-barlow text-[2rem] 2xl:text-[4rem]">
       {{ title }}
     </div>
     <div>
       <div v-if="software" class="flex flex-wrap gap-x-8 gap-y-3">
-        <div v-for="(soft, i) in software" :key="i" class="flex space-x-4 animate__animated animate__fadeIn animate__faster">
+        <div v-for="(soft, i) in software" :key="i" class="flex space-x-4 ">
           <i class="my-auto flex h-4 w-4 2xl:h-6 2xl:w-6">
             <IconLibrary :name="soft.svg"/>
           </i>
