@@ -16,7 +16,7 @@
 
         <div class="flex h-full flex-col justify-between lg:space-x-6 lg:flex-row">
           <div class="relative flex flex-1 overflow-hidden lg:min-h-[80vh] lg:mb-10 lg:w-4/12 lg:overflow-auto">
-            <div class="absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg">
+            <div class="absolute top-0 left-0 h-full w-full overflow-hidden rounded-lg">
               <img
                 v-for="(project, i) in data"
                 :key="i"
@@ -73,7 +73,7 @@
           <div
             v-for="(project, i) in data"
             :key="i"
-            class="w-8/12 pb-10"
+            class="w-8/12 lg:pb-10"
             :class="states.projectIndex !== i ? 'hidden' : 'flex'"
           >
             <ProjectInfo :project="project"/>
