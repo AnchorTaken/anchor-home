@@ -9,5 +9,5 @@ export default defineNuxtConfig({
     },
   },
   css: ['/src/assets/css/styles.css'],
-  modules: ['@nuxtjs/eslint-module'],
+  modules: ['@next/eslint-module'],
 })
