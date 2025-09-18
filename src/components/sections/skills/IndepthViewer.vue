@@ -67,13 +67,13 @@ function formatTime(hours){
     return `${hours} h`; // Less than 72 hours
   } else if (hours < 8760){ // 365 days
     const days = Math.round(hours / 24);
-    return `${days} days`;
+    return `${days} d`;
   } else if (hours < 105120){ // 12 months
     const months = Math.round(hours / (24 * 365 / 12));
-    return `${months} months`;
+    return `${months} m`;
   } else {
     const years = Math.round(hours / (24 * 365));
-    return `${years} years`;
+    return `${years} y`;
   }
 }
 

@@ -4,7 +4,7 @@
       <svg v-html="icon"/>
     </i>
 
-    <span class="my-auto flex h-fit text-base font-semibold uppercase leading-none font-jet lg:text-xl select-none" :class="isHovered ? 'text-slate-950' : 'text-white'">
+    <span class="my-auto flex animate__animated animate__fadeIn animate__faster h-fit text-base font-semibold uppercase leading-none font-jet lg:text-xl select-none" :class="isHovered ? 'text-slate-950' : 'text-white'">
       <slot/>
     </span>
   </div>
