@@ -10,7 +10,7 @@
       </div>
       <div class="flex flex-col space-y-4 lg:w-1/2">
         <SimpleParagraph class="px-5 md:w-2/3 lg:w-full">
-          I am a web designer with 6 years of expertise in the field, and I aim to create the most stunning experiences without sacrificing UX.
+          I am a web designer with 8 years of expertise in the field, and I aim to create the most stunning experiences without sacrificing UX.
         </SimpleParagraph>
 
         <div class="flex max-h-full justify-between space-x-4">
